@@ -1,4 +1,4 @@
-# Initialization
+#input
 company_name = input("Enter company name: ")
 department = input("Enter department: ")
 employee_code = input("Enter employee's code or number: ")
@@ -154,6 +154,13 @@ elif 29250 <= gross_earn <= 29749.00:
 elif gross_earn >= 29750:
     sss_contribution = 900.00
 
+#Deductions
+n_deduct = absences_pay + sss_contribution + tardiness_pay + philhealth_contribution +withholding_tax + pag_ibig_contribution
+
+#Net Pay
+net_pay = gross_earn - n_deduct
+
+
 print("\n============ Employee Details =============")
 print(f"Company Name    : {company_name}")
 print(f"Department      : {department}")
@@ -183,4 +190,9 @@ print("\n===========================================")
 print(f"PhilHealth Contribution : {philhealth_contribution:.2f}")
 print("\n===========================================")
 print(f"Pag-Ibig Contribution   : {pag_ibig_contribution:.2f}")
+print("\n===========================================")
+print(f"Deductions      : {n_deduct:.2f}")
+print("\n===========================================")
+print(f"Net Pay         : {net_pay: .2f}")
+
 
