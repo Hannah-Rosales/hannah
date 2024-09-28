@@ -1,4 +1,4 @@
-
+# Initialization
 company_name = input("Enter company name: ")
 department = input("Enter department: ")
 employee_code = input("Enter employee's code or number: ")
