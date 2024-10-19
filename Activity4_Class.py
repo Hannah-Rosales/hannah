@@ -1,0 +1,67 @@
+class Student_Info:
+
+    def __init__(self):
+        self.student_name = ""
+        self.course = ""
+        self.student_number = ""
+        self.academic_year = ""
+        self.current_date = ""
+
+    def get_student_data(self, student_name, course, student_number, academic_year, current_date):
+        self.student_name = student_name
+        self.course = course
+        self.student_number = student_number
+        self.academic_year = academic_year
+        self.current_date = current_date
+
+    def std_display_data(self):
+        print("Name: ", self.student_name)
+        print("Course: ", self.course)
+        print("Student Number: ", self.student_number)
+        print("Academic Year: ", self.academic_year)
+        print("Current Date: ", self.current_date)
+
+class Academic_Details:
+
+    def __init__(self):
+        self.section = ""
+        self.subjects = ""
+        self.units = ""
+
+    def add_subject(self, subjects, units, section):
+        self.subjects = subjects
+        self.units = units
+        self.section = section
+
+    def total_units(self):
+        return sum(self.units)
+
+    def tuition_fee(self):
+        return self.total_units() * 1551.00
+
+    def assessment_amount(self, additional_fees):
+        return self.tuition_fee() + sum(additional_fees)
+
+    def total_due(self, additional_fees, downpayment):
+        return self.assessment_amount(additional_fees) - downpayment
+
+    def payment_terms(self, total_due):
+        return total_due / 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
